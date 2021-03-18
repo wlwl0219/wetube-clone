@@ -1,10 +1,21 @@
 {
   "name": "wetube-clone",
   "version": "1.0.0",
-  "description": "Cloning Youtube with Vanilla and NodeJS",
+  "description": "Cloning Youtube with VanillaJS and NodeJS",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10"
   }
 }
