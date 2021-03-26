@@ -14,6 +14,13 @@ import userRouter from './routers/userRouter';
 import videoRouter from './routers/videoRouter';
 
 app.use(helmet());
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "script-src 'self' https://archive.org"
+  );
+  return next();
+});
 // express의 view엔진을 pug로 설정한다.
 app.set('view engine', 'pug');
 app.use(cookieParser());

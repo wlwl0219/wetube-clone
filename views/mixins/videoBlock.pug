@@ -1,0 +1,10 @@
+//- mixin은 pug의 함수의 일종이다.
+//- 비디오가 프로파일페이지에도 필요하고..등등 필요함. 
+//- 따라서 이를 partial로 컴포넌트화 시킴 이 방법을 mixin이라고 한다함. 
+//- 즉, 자주반복되어 재활용되는 코드를 묶어둠. pug의 함수!
+mixin videoBlock(video = {})
+    .videoBlock
+        a(href=routes.videoDetail(video.id))
+            video.videoBlock__thumbnail(src=video.videoFile, controls=true)
+            h4.videoBlock__title=video.title
+            h6.videoBlock__views=video.views 
