@@ -1,4 +1,3 @@
-import { videos } from '../db';
 import routes from '../routes';
 // send대신 render를 이용해 템플릿 파일을 전달한다.
 // render함수에 첫번째 인자는 view파일을 지정해줬다면
