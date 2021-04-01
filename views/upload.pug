@@ -1,10 +1,12 @@
+//- 파일은 비디오만 받을 수 있게 설정하고
+//- multer를 사용하기 위해 form의 enctype속성을 추가한다.
 extends layouts/main
 
 block content
     .form-container
-        form(action=`/videos${routes.upload}`, method="post")
+        form(action=`/videos${routes.upload}`, method="post", enctype="multipart/form-data")
             label(for="file") Video File
-            input(type="file", id="file", name="file", required=true)
+            input(type="file", id="file", name="videoFile", required=true)
             input(type="text", placeholder="Title", name="title", required=true)
             textarea(name="description", placeholder="Description", required=true)
             input(type="submit", value="Upload Video")

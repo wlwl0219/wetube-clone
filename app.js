@@ -23,6 +23,8 @@ app.use((req, res, next) => {
 });
 // express의 view엔진을 pug로 설정한다.
 app.set('view engine', 'pug');
+// 디렉토리에서 파일을 보내주는 미들웨어
+app.use("/uploads", express.static("uploads"));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
