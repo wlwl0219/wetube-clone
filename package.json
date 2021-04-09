@@ -4,7 +4,9 @@
   "description": "Cloning Youtube with VanillaJS and NodeJS",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node init.js"
+    "start": "nodemon --exec babel-node init.js --delay 2 --ignore 'scss'",
+    "dev:assets": "WEBPACK_ENV=development webpack -w",
+    "build:assets": "WEBPACK_ENV=production webpack"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -20,13 +22,36 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/node": "^7.13.10",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.10",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
     "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
+    "mini-css-extract-plugin": "^1.4.1",
+    "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
-    "prettier": "^2.2.1"
+    "postcss": "^8.2.9",
+    "postcss-loader": "^5.2.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
