@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Cloning Youtube with NodeJS, Express, Mongo and ES6",
   "scripts": {
-    "dev": "nodemon --exec babel-node index.js"
+    "dev": "nodemon --exec babel-node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/wlwl0219/wetube-clone#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
